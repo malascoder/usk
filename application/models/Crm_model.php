@@ -24,6 +24,7 @@ class Crm_model extends CI_Model{
 		$arraydata = array('nama' => $this->input->post('nama_siswa'),
 						   'kelas' => $this->input->post('kelas'),
 						   'bulan' =>$this->input->post('bulan'),
+						   'tanggal' =>$this->input->post('tanggal'),
 						   'nominal' => $this->input->post('nominal'));
 		$this->db->insert('pembayaran',$arraydata);
 	}

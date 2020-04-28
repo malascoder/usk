@@ -126,6 +126,7 @@
                                         <table class="table table-hover mb-0">
                                             <thead>
                                                 <tr>
+                                                    <th>Nomor</th>
                                                     <th>Nama Siswa</th>
                                                     <th>Kelas</th>
                                                     <th>Pembayaran</th>
@@ -135,9 +136,12 @@
                                             </thead>
                                             <tbody>
                                                 <?php 
-                                                foreach($list->result() as $value);
+                                                    $count = 0;
+                                                foreach ($list->result() as $value);
+                                                    $count++;
                                                 ?>
                                                 <tr>
+                                                    <td><?php echo $count; ?></td>
                                                     <td><?php echo $value->nama;?></td>
                                                     <td><?php echo $value->kelas;?></td>
                                                     <td><?php echo $value->bulan;?></td>
@@ -145,7 +149,6 @@
                                                     <td><a href="#!"><i class="ik ik-edit f-16 mr-15 text-green"></i></a><a href="#!"><i class="ik ik-trash-2 f-16 text-red"></i></a></td>
                                                 </tr>
                                                 <?php 
-                                                
                                                  ?>
                                             </tbody>
                                         </table>

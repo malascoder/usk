@@ -12,11 +12,12 @@
          }
 
         public function index(){
-            $this->load->view('index_admin');
+            $data['list'] = $this->Crm_model->list_bayar();
+            $this->load->view('index_admin',$data);
         }
 
         public function list(){
-            $data['list'] = $this->Crm_model->list_bayar()->result();
+            // $data['list'] = $this->Crm_model->list_bayar()->result();
             $this->load->view('index_admin',$data);
         }
 
