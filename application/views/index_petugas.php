@@ -12,19 +12,19 @@
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
         
-        <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
-        <link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
-        <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
-        <link rel="stylesheet" href="plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
-        <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap.css">
-        <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
-        <link rel="stylesheet" href="plugins/weather-icons/css/weather-icons.min.css">
-        <link rel="stylesheet" href="plugins/c3/c3.min.css">
-        <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.theme.default.min.css">
-        <link rel="stylesheet" href="dist/css/theme.min.css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/fontawesome-free/css/all.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/icon-kit/dist/css/iconkit.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/ionicons/dist/css/ionicons.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/jvectormap/jquery-jvectormap.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/weather-icons/css/weather-icons.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/c3/c3.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/owl.carousel/dist/assets/owl.carousel.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/owl.carousel/dist/assets/owl.theme.default.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/theme.min.css')?>">
         <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 
@@ -54,7 +54,7 @@
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="img/user.jpg" alt=""></a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
+                                    <a class="dropdown-item" href="<?php echo base_url('login/logout')?>"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                                 </div>
                             </div>
 
@@ -84,11 +84,11 @@
                                     <a href="index.html"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
                                 </div>
                                 <div class="nav-item">
-                                    <a href="#"><i class="ik ik-menu"></i><span>Input Pembayaran</span></a>
+                                    <a href="input"><i class="ik ik-plus-square"></i><span>Input Pembayaran</span></a>
                                 </div>
                                 <div class="nav-lavel">account</div>
                                 <div class="nav-item">
-                                    <a href="pages/login.html"><i class="ik ik-power"></i><span>Logout</span></a>
+                                    <a href="<?php echo base_url('login/logout')?>"><i class="ik ik-power"></i><span>Logout</span></a>
                                 </div>
                             </nav>
                         </div>
@@ -120,129 +120,31 @@
                                         <table class="table table-hover mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th>Nama Siswa</th>
+                                                    <th>Nomor</th>
+                                                    <th>Nama</th>
                                                     <th>Kelas</th>
-                                                    <th>Lead Score</th>
-                                                    <th>Date</th>
-<!--                                                    <th>Tags</th>-->
+                                                    <th>Pembayaran</th>
+                                                    <th>Tanggal</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            <?php 
+                                                    $count = 0;
+                                                foreach ($list->result() as $value);
+                                                    $count++;
+                                                ?>
                                                 <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Pinterest</td>
-                                                    <td>223</td>
-                                                    <td>19-11-2018</td>
-<!--
-                                                    <td>
-                                                        <label class="badge badge-primary">Sketch</label>
-                                                        <label class="badge badge-primary">Ui</label>
-                                                    </td>
---></tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>James Alexander</h6>
-                                                                <p class="text-muted mb-0">Sales executive , EL</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Facebook</td>
-                                                    <td>268</td>
-                                                    <td>19-11-2018</td>
-<!--
-                                                    <td>
-                                                        <label class="badge badge-primary">Ux</label>
-                                                        <label class="badge badge-danger">Ui</label>
-                                                        <label class="badge badge-danger">php</label>
-                                                    </td>
---></tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Twitter</td>
-                                                    <td>293</td>
-                                                    <td>16-03-2018</td>
-<!--
-                                                    <td>
-                                                        <label class="badge badge-danger">Sketch</label>
-                                                        <label class="badge badge-primary">Ui</label>
-                                                    </td>
---></tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Pinterest</td>
-                                                    <td>223</td>
-                                                    <td>19-11-2018</td>
-<!--
-                                                    <td>
-                                                        <label class="badge badge-primary">Ux</label>
-                                                        <label class="badge badge-success">Ui</label>
-                                                        <label class="badge badge-warning">php</label>
-                                                    </td>
---> </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>James Alexander</h6>
-                                                                <p class="text-muted mb-0">Sales executive , EL</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Facebook</td>
-                                                    <td>268</td>
-                                                    <td>19-11-2018</td>
-<!--
-                                                    <td>
-                                                        <label class="badge badge-primary">Sketch</label>
-                                                        <label class="badge badge-primary">Ui</label>
-                                                    </td>
---></tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Twitter</td>
-                                                    <td>293</td>
-                                                    <td>16-03-2018</td>
-<!--
-                                                    <td>
-                                                        <label class="badge badge-danger">Sketch</label>
-                                                        <label class="badge badge-primary">Ui</label>
-                                                    </td>
---> </tr>
+                                                <td><?php echo $count; ?></td>
+                                                    <td><?php echo $value->nama;?></td>
+                                                    <td><?php echo $value->kelas;?></td>
+                                                    <td><?php echo $value->bulan;?></td>
+                                                    <td><?php echo $value->tanggal;?></td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="card-body">
-                                        <button type="button" class="btn btn-info">Input SPP</button>
+                                    <a href="main/input"><button href="main" type="button" class="btn btn-info">Input SPP</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -351,24 +253,24 @@
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-        <script src="plugins/popper.js/dist/umd/popper.min.js"></script>
-        <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-        <script src="plugins/screenfull/dist/screenfull.js"></script>
-        <script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-        <script src="plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-        <script src="plugins/jvectormap/jquery-jvectormap.min.js"></script>
-        <script src="plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
-        <script src="plugins/moment/moment.js"></script>
-        <script src="plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
-        <script src="plugins/d3/dist/d3.min.js"></script>
-        <script src="plugins/c3/c3.min.js"></script>
-        <script src="js/tables.js"></script>
-        <script src="js/widgets.js"></script>
-        <script src="js/charts.js"></script>
-        <script src="dist/js/theme.min.js"></script>
+        <script src="<?php echo base_url('assets/plugins/popper.js/dist/umd/popper.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/bootstrap/dist/js/bootstrap.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/screenfull/dist/screenfull.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/datatables.net/js/jquery.dataTables.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/jvectormap/jquery-jvectormap.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/moment/moment.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/d3/dist/d3.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/plugins/c3/c3.min.js')?>"></script>
+        <script src="<?php echo base_url('assets/js/tables.js')?>"></script>
+        <script src="<?php echo base_url('assets/js/widgets.js')?>"></script>
+        <script src="<?php echo base_url('assets/js/charts.js')?>"></script>
+        <script src="<?php echo base_url('assets/dist/js/theme.min.js')?>"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

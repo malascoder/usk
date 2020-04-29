@@ -12,19 +12,19 @@
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
         
-        <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="plugins/icon-kit/dist/css/iconkit.min.css">
-        <link rel="stylesheet" href="plugins/ionicons/dist/css/ionicons.min.css">
-        <link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
-        <link rel="stylesheet" href="plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
-        <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap.css">
-        <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css">
-        <link rel="stylesheet" href="plugins/weather-icons/css/weather-icons.min.css">
-        <link rel="stylesheet" href="plugins/c3/c3.min.css">
-        <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.carousel.min.css">
-        <link rel="stylesheet" href="plugins/owl.carousel/dist/assets/owl.theme.default.min.css">
-        <link rel="stylesheet" href="dist/css/theme.min.css">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/fontawesome-free/css/all.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/icon-kit/dist/css/iconkit.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/ionicons/dist/css/ionicons.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/jvectormap/jquery-jvectormap.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/weather-icons/css/weather-icons.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/c3/c3.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/owl.carousel/dist/assets/owl.carousel.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/plugins/owl.carousel/dist/assets/owl.theme.default.min.css')?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/theme.min.css')?>">
         <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 
@@ -75,11 +75,11 @@
                             <nav id="main-menu-navigation" class="navigation-main">
                                 <div class="nav-lavel">Navigation</div>
                                 <div class="nav-item active">
-                                    <a href="index.html"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
+                                    <a href="#"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
                                 </div>
                                 <div class="nav-lavel">account</div>
                                 <div class="nav-item">
-                                    <a href="pages/login.html"><i class="ik ik-power"></i><span>Logout</span></a>
+                                    <a href="<?php echo base_url('login/logout')?>"><i class="ik ik-power"></i><span>Logout</span></a>
                                 </div>
                             </nav>
                         </div>
@@ -107,103 +107,31 @@
                             <div class="card table-card">
                                 <div class="card-header">
                                     <h3>History pembayaran</h3>
-                                    <!-- <div class="card-header-right">
-                                        <ul class="list-unstyled card-option">
-                                            <li><i class="ik ik-chevron-left action-toggle"></i></li>
-                                            <li><i class="ik ik-minus minimize-card"></i></li>
-                                            <li><i class="ik ik-x close-card"></i></li>
-                                        </ul>
-                                    </div> -->
                                 </div>
                                 <div class="card-block">
                                     <div class="table-responsive">
                                         <table class="table table-hover mb-0">
                                             <thead>
                                                 <tr>
+                                                    <th>Nomor</th>
                                                     <th>Nama Siswa</th>
-                                                    <th>Keterangan</th>
-                                                    <th>Lead Score</th>
+                                                    <th>Kelas</th>
+                                                    <th>Pembayaran</th>
                                                     <th>Date</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            <?php 
+                                                    $count = 0;
+                                                foreach ($list->result() as $value);
+                                                    $count++;
+                                                ?>
                                                 <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Pinterest</td>
-                                                    <td>223</td>
-                                                    <td>19-11-2018</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>James Alexander</h6>
-                                                                <p class="text-muted mb-0">Sales executive , EL</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Facebook</td>
-                                                    <td>268</td>
-                                                    <td>19-11-2018</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Twitter</td>
-                                                    <td>293</td>
-                                                    <td>16-03-2018</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Pinterest</td>
-                                                    <td>223</td>
-                                                    <td>19-11-2018</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>James Alexander</h6>
-                                                                <p class="text-muted mb-0">Sales executive , EL</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Facebook</td>
-                                                    <td>268</td>
-                                                    <td>19-11-2018</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="d-inline-block align-middle">
-                                                            <div class="d-inline-block">
-                                                                <h6>Shirley  Hoe</h6>
-                                                                <p class="text-muted mb-0">Sales executive , NY</p>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td>Twitter</td>
-                                                    <td>293</td>
-                                                    <td>16-03-2018</td>
+                                                    <td><?php echo $count; ?></td>
+                                                    <td><?php echo $value->nama;?></td>
+                                                    <td><?php echo $value->kelas;?></td>
+                                                    <td><?php echo $value->bulan;?></td>
+                                                    <td><?php echo $value->tanggal;?></td>
                                                 </tr>
                                             </tbody>
                                         </table>

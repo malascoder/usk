@@ -27,6 +27,18 @@ class Login extends CI_Controller{
 				$this->session->set_userdata('ses_password', $data['password']);
 				redirect('main');
 			}
+			elseif ($data['usr_level'] == '1'){
+				$this->session->set_userdata('usr_level','1');
+				$this->session->set_userdata('ses_username',$data['username']);
+				$this->session->set_userdata('ses_password', $data['password']);
+				redirect('main/petugas');
+			}
+			elseif ($data['usr_level'] == '2'){
+				$this->session->set_userdata('usr_level','2');
+				$this->session->set_userdata('ses_username',$data['username']);
+				$this->session->set_userdata('ses_password', $data['password']);
+				redirect('main/siswa');
+			}
 		}else{
 			redirect('login');
 		}

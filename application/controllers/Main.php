@@ -16,6 +16,16 @@
             $this->load->view('index_admin',$data);
         }
 
+        public function petugas(){
+            $data['list'] = $this->Crm_model->list_bayar();
+            $this->load->view('index_petugas',$data);
+        }
+
+        public function siswa(){
+            $data['list'] = $this->Crm_model->list_bayar();
+            $this->load->view('index_siswa',$data);
+        }
+
         public function list(){
             // $data['list'] = $this->Crm_model->list_bayar()->result();
             $this->load->view('index_admin',$data);
@@ -40,7 +50,7 @@
 
         public function reg(){
             $this->Crm_model->registersimpan();
-            redirect(base_url(''));
+            redirect(base_url('main/index_admin'));
         }
 
         public function pay(){

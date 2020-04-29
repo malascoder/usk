@@ -39,8 +39,8 @@
                             <div class="text-center">
                                 <a href="#"><img src="favicon.ico" width="100px" height="100px" alt="SPP"></a>
                             </div><br>
-                            <h3 class="text-center">Sign aIn</h3>
-                            <p class="text-center">Selamat Datang Di <br>Sistem Pembayaran SPP</p>
+                            <h3 class="text-center">Sign In</h3>
+                            <p class="text-center">Selamat Datang <br> Sistem Pembayaran SPP</p>
                             <form action="<?php echo ('index.php/login/authuser')?>" method="post">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="username" name='username' placeholder="Username" required="">
